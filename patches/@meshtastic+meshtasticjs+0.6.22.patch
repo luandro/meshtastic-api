@@ -1,0 +1,79 @@
+diff --git a/node_modules/@meshtastic/meshtasticjs/dist/generated/admin.js b/node_modules/@meshtastic/meshtasticjs/dist/generated/admin.js
+index 5822735..a3290e9 100644
+--- a/node_modules/@meshtastic/meshtasticjs/dist/generated/admin.js
++++ b/node_modules/@meshtastic/meshtasticjs/dist/generated/admin.js
+@@ -2,9 +2,9 @@
+ // @generated from protobuf file "admin.proto" (syntax proto3)
+ // tslint:disable
+ import { MessageType } from "@protobuf-ts/runtime";
+-import { Channel } from "./channel";
+-import { User } from "./mesh";
+-import { RadioConfig } from "./radioconfig";
++import { Channel } from "./channel.js";
++import { User } from "./mesh.js";
++import { RadioConfig } from "./radioconfig.js";
+ // @generated message type with reflection information, may provide speed optimized methods
+ class AdminMessage$Type extends MessageType {
+     constructor() {
+diff --git a/node_modules/@meshtastic/meshtasticjs/dist/generated/apponly.js b/node_modules/@meshtastic/meshtasticjs/dist/generated/apponly.js
+index 1982d5e..4bfd282 100644
+--- a/node_modules/@meshtastic/meshtasticjs/dist/generated/apponly.js
++++ b/node_modules/@meshtastic/meshtasticjs/dist/generated/apponly.js
+@@ -2,7 +2,7 @@
+ // @generated from protobuf file "apponly.proto" (syntax proto3)
+ // tslint:disable
+ import { MessageType } from "@protobuf-ts/runtime";
+-import { ChannelSettings } from "./channel";
++import { ChannelSettings } from "./channel.js";
+ // @generated message type with reflection information, may provide speed optimized methods
+ class ChannelSet$Type extends MessageType {
+     constructor() {
+diff --git a/node_modules/@meshtastic/meshtasticjs/dist/generated/deviceonly.js b/node_modules/@meshtastic/meshtasticjs/dist/generated/deviceonly.js
+index eefa163..9df5b95 100644
+--- a/node_modules/@meshtastic/meshtasticjs/dist/generated/deviceonly.js
++++ b/node_modules/@meshtastic/meshtasticjs/dist/generated/deviceonly.js
+@@ -2,12 +2,12 @@
+ // @generated from protobuf file "deviceonly.proto" (syntax proto3)
+ // tslint:disable
+ import { MessageType } from "@protobuf-ts/runtime";
+-import { Channel } from "./channel";
+-import { MeshPacket } from "./mesh";
+-import { NodeInfo } from "./mesh";
+-import { User } from "./mesh";
+-import { MyNodeInfo } from "./mesh";
+-import { RegionCode } from "./radioconfig";
++import { Channel } from "./channel.js";
++import { MeshPacket } from "./mesh.js";
++import { NodeInfo } from "./mesh.js";
++import { User } from "./mesh.js";
++import { MyNodeInfo } from "./mesh.js";
++import { RegionCode } from "./radioconfig.js";
+ // @generated message type with reflection information, may provide speed optimized methods
+ class LegacyRadioConfig$Type extends MessageType {
+     constructor() {
+diff --git a/node_modules/@meshtastic/meshtasticjs/dist/generated/mesh.js b/node_modules/@meshtastic/meshtasticjs/dist/generated/mesh.js
+index 176cea8..7a733d4 100644
+--- a/node_modules/@meshtastic/meshtasticjs/dist/generated/mesh.js
++++ b/node_modules/@meshtastic/meshtasticjs/dist/generated/mesh.js
+@@ -2,7 +2,7 @@
+ // @generated from protobuf file "mesh.proto" (syntax proto3)
+ // tslint:disable
+ import { MessageType } from "@protobuf-ts/runtime";
+-import { PortNum } from "./portnums";
++import { PortNum } from "./portnums.js";
+ // 
+ // Precision positioning elements - optional and usually not included
+ // ------------------------------------------------------------------
+diff --git a/node_modules/@meshtastic/meshtasticjs/dist/generated/mqtt.js b/node_modules/@meshtastic/meshtasticjs/dist/generated/mqtt.js
+index 15f56ba..10b8db8 100644
+--- a/node_modules/@meshtastic/meshtasticjs/dist/generated/mqtt.js
++++ b/node_modules/@meshtastic/meshtasticjs/dist/generated/mqtt.js
+@@ -2,7 +2,7 @@
+ // @generated from protobuf file "mqtt.proto" (syntax proto3)
+ // tslint:disable
+ import { MessageType } from "@protobuf-ts/runtime";
+-import { MeshPacket } from "./mesh";
++import { MeshPacket } from "./mesh.js";
+ // @generated message type with reflection information, may provide speed optimized methods
+ class ServiceEnvelope$Type extends MessageType {
+     constructor() {

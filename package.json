@@ -2,16 +2,30 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "postinstall": "patch-package && cd node_modules/sub-events && npm i",
     "start": "tsm src/index.ts"
   },
   "devDependencies": {
     "@types/node": "^16.11.6",
+    "patch-package": "^6.4.7",
     "tsm": "^2.1.4"
   },
   "dependencies": {
     "@meshtastic/meshtasticjs": "^0.6.21",
     "@prisma/client": "^3.3.0",
     "@tinyhttp/app": "^2.0.12",
-    "prisma": "^3.3.0"
+    "milliparsec": "^2.2.0",
+    "prisma": "^3.3.0",
+    "secret-stack": "^6.4.0",
+    "ssb-caps": "^1.1.0",
+    "ssb-config": "^3.4.6",
+    "ssb-conn": "^5.2.0",
+    "ssb-db2": "^2.7.0",
+    "ssb-ebt": "^8.0.1",
+    "ssb-friends": "^5.1.0",
+    "ssb-lan": "^1.0.0",
+    "ssb-master": "^1.0.3",
+    "ssb-promiscuous": "^1.1.0",
+    "ssb-replication-scheduler": "^1.0.1"
   }
 }

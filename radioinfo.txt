@@ -1,0 +1,19 @@
+Connected to radio
+
+Owner: Unknown 4804 (?04)
+
+My info: { "myNodeNum": 4066789380, "hasGps": true, "numBands": 13, "firmwareVersion": "1.2.46.dce2fe4", "rebootCount": 8, "messageTimeoutMsec": 300000, "minAppVersion": 20200, "maxChannels": 8 }
+
+Nodes in mesh:
+  {'num': 4066789380, 'user': {'id': '!f2664804', 'longName': 'Unknown 4804', 'shortName': '?04', 'macaddr': 'CDryZkgE', 'hwModel': 'TBEAM'}, 'position': {}}
+  {'num': 4066790292, 'user': {'id': '!f2664b94', 'longName': 'Conteiner', 'shortName': 'ctr', 'macaddr': 'CDryZkuU', 'hwModel': 'TBEAM'}, 'position': {}, 'snr': 5.75}
+
+Preferences: { "phoneTimeoutSecs": 900, "lsSecs": 300 }
+
+Channels:
+  PRIMARY psk=default { "modemConfig": "Bw500Cr45Sf128", "psk": "AQ==" }
+  SECONDARY psk=secret { "psk": "9AhQRva8Aaq+c/36mu814YolUvkRBwREtUTJHArJooI=", "name": "psp" }
+
+Primary channel URL: https://www.meshtastic.org/d/#CgUYASIBAQ
+Complete URL (includes all channels): https://www.meshtastic.org/d/#CgUYASIBAQonIiD0CFBG9rwBqr5z_fqa7zXhiiVS-REHBES1RMkcCsmigioDcHNw
+

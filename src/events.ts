@@ -1,10 +1,10 @@
-import { TextDecoder } from 'util';
+import { TextDecoder } from "util";
 
-import { Protobuf } from '@meshtastic/meshtasticjs';
-import type { Hardware as HardwareType } from '@prisma/client';
-import pkg from '@prisma/client';
-
-import { connection, prisma } from './index.js';
+import { Protobuf } from "@meshtastic/meshtasticjs";
+import type { Hardware as HardwareType } from "@prisma/client";
+import pkg from "@prisma/client";
+import { connection, prisma } from "./index.js";
+import { postMessage } from "./ssb";
 
 const { Hardware } = pkg;
 
@@ -151,22 +151,24 @@ export const RegisterSubscribers = () => {
   });
 
   connection.onTextPacket.subscribe(async (packet) => {
-    await prisma.message.create({
-      data: {
-        message: packet.data,
-        packetId: packet.packet.id,
-        from: {
-          connect: {
-            number: packet.packet.from,
-          },
-        },
-        to: {
-          connect: {
-            number: packet.packet.to === 0xffffffff ? -1 : packet.packet.to,
-          },
-        },
-      },
-    });
+    const nodeNum = connection?.myNodeInfo?.myNodeNum;
+    if (nodeNum !== packet.packet.from) {
+      try {
+        const content = {
+          type: "post",
+          text: packet.data,
+          loraTo:
+            packet.packet.to === 0xffffffff ? -1 : packet.packet.to.toString(),
+          loraPacketId: packet.packet.id.toString(),
+          loraFrom: packet.packet.from.toString(),
+          loraChannel: packet.packet.channel,
+          loraRxSnr: packet.packet.rxSnr,
+        };
+        await postMessage(content);
+      } catch (err) {
+        console.log("Error sending message", err);
+      }
+    } else console.log('From node')
   });
 
   connection.onPrivatePacket.subscribe(async (packet) => {

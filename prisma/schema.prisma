@@ -1,6 +1,6 @@
 datasource db {
     provider = "postgresql"
-    url      = env("DATABASE_URL")
+    url      = "postgresql://postgres:mysecretpassword@127.0.0.1:5432/meshtastic"
 }
 
 generator client {
